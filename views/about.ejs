@@ -5,11 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Ninja <%= title %></title>
-    
+    <style>
+        .about{
+            text-align: center;
+            margin: 20px auto;
+            width: 18rem;
+        }
+    </style>
 </head>
 <body>
     <%- include('./partiel/nav.ejs') %> 
-    <div class="Blogs content">
+    <div class="about" >
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget tortor risus. Etiam vitae accumsan risus. Nam placerat nibh vel viverra facilisis. Phasellus id dictum ante. Etiam varius lacus felis. Praesent dolor urna, hendrerit a nisl nec, feugiat dignissim lectus. Nulla congue elit tempus purus gravida, gravida maximus leo lobortis. Proin porttitor aliquet augue tincidunt finibus. Vestibulum facilisis elit tortor, ut accumsan mauris scelerisque eu. Duis auctor nulla at iaculis maximus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aenean diam mauris, sodales ut imperdiet sit amet, malesuada at nibh. Pellentesque a nunc at est placerat consectetur ut vel nibh.</p>
     </div>
     <%- include('./partiel/footer.ejs') %> 

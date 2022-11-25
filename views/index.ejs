@@ -5,18 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Ninja <%= title %>  </title>
+    <style>
+        .Blogs{
+            max-width: 10;
+        }
+        h1{
+            text-align: center;
+            margin-top: 2rem;
+        }
+        h2{
+            margin: 15px;
+            font-size: 23px;
+            font-weight: bolder;
+        }
+        p{
+            font-size: 18px;
+            font-weight: 100;
+        }
+    </style>
 </head>
 <body>
     <%- include('./partiel/nav.ejs') %> 
 
-    <div class="Blogs content">
-        <h2>all blogs</h2>
+    <div class="Blogs" >
+        <h1>all blogs</h1>
 
         <% if(blogs.length > 0){ %> 
             <% blogs.forEach(blog =>{ %> 
-                <p><%= blog.title %> </p>
-                <p><%= blog.snippet %> </p>
-                <p><%= blog.body %> </p>
+                <h2>Title is <p><%= blog.title %></p> </h2>
+                <h2>Your Snippet :<p><%= blog.snippet %></p> </h2>
+                <h2>Description <p><%= blog.body %></p> </h2>
             <% }) %> 
         <% } %> 
         

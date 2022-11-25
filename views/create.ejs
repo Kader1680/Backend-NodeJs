@@ -7,6 +7,25 @@
     <title>Blog Ninja <%= title %></title>
 </head>
 <style>
+    @media(max-width:767px){
+        .input_field{
+            margin-top: 1rem;
+        }
+        textarea{
+            width: 52%;
+            height: 10rem;
+        }
+        button{
+            margin-left: 2rem;
+            width: 50%;
+        }
+    }
+    @media(min-width:768px){}
+    @media(min-width:991px){}
+    @media(min-width:1199px){}
+    .input_field{
+        text-align: center;
+    }
     input{
         border: none;
         padding: 6px 10px;
@@ -15,23 +34,23 @@
         width: 50%;
     }
     button{
-        margin: 18px 0px;
-        width: 10%;
+        
         padding: 6px;
         font-weight: bolder;
     }
+    
 </style>
 <body>
 
     <%- include('./partiel/nav.ejs') %> 
 
-    <div class="Blogs content">
+    <div class="input_field">
         <form action="/blogs" method="post">
-            <label for="title">title</label><br>
+            <label for="title">title</label>
             <input type="text" name="title" required><br>
-            <label for="snippet">snippet</label><br>
+            <label for="snippet">title</label>
             <input type="text" name="snippet" required><br>
-            <label for="body"> body </label><br>
+            <label for="body">body</label>
             <textarea rows="5" cols="" name="body" required></textarea><br>
             <button>Submite</button>
         </form>

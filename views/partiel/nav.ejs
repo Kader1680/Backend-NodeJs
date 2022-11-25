@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
     body{
         background-color: rgb(0, 129, 62);
         color: white;
@@ -13,12 +18,10 @@
     nav{
         color: rgb(0, 129, 62);
         background-color: white;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
     }
     nav ul{
         list-style: none;
+        margin-top: 2rem;
     }
     ul li{
         display: inline-block;
@@ -29,11 +32,33 @@
         text-decoration: none;
         font-weight: bold;
     }
+    @media(max-width:767px){
+        nav{
+            display: block;
+            text-align: center;
+            padding: 15px 0px;
+        }
+        .head{
+            display: flex;
+            text-align: center;
+            justify-content: space-around;
+        }
+    }
+    @media(min-width:768px){
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+    @media(min-width:991px){}
+    @media(min-width:1199px){}
+    
 </style>
 <body>
     
     <nav>
-        <div>
+        <div class="head">
             <a href="/"><h1>Blog Ninga</h1></a>
             <p>a net ninja site</p>
         </div>
